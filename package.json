@@ -1,0 +1,42 @@
+{
+  "name": "happytime",
+  "version": "1.0.0",
+  "description": "happytime app started by CBUS startup week",
+  "main": "app.js",
+  "scripts": {
+    "test": "DEBUG=app nodemon app.js",
+    "start": "set DEBUG=app,app:* & nodemon app.js",
+    "lint": "eslint app.js"
+  },
+  "author": "Corey Schnedl",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "chalk": "^2.4.2",
+    "debug": "^4.1.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "jquery": "^3.3.1",
+    "morgan": "^1.9.1",
+    "mssql": "^5.0.3",
+    "nodemon": "^1.18.10",
+    "owl.carousel": "^2.3.4",
+    "popper.js": "^1.14.7"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-config-airbnb-base": "^13.1.0"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": 2500,
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 3000
+    }
+  }
+}
